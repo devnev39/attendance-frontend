@@ -1,0 +1,15 @@
+.container-fluid{
+    padding: 1% 0 1% 20%;
+    font-size: 1.5rem;
+}
+
+.navbar-brand{
+    font-size: 2rem;
+    margin-right: 35%;
+}
+
+.userCard {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 30% 0 0 0;
+}

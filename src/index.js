@@ -1,17 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import {BrowserRouter} from "react-router-dom";
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import "./styles.css";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <BrowserRouter>
+    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <div className="container-fluid rounded">
+        <a className="navbar-brand" href="/">Attendance</a>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div className="navbar-nav">
+            <a className="nav-link mx-3" href="/">Recognise</a>
+            <a className="nav-link mx-3" href="/register">Register</a>
+            <a className="nav-link mx-3" href='/manage'>Manage</a>
+          </div>
+        </div>
+      </div>
+    </nav>
     <App />
-  </React.StrictMode>
+  </BrowserRouter>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
